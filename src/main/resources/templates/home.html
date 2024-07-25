@@ -4,24 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <style>
-      .container {
-        margin: auto;
-        width: 50%;
-        padding: 30px;
-        background: #e2e2e2;
-      }
-    </style>
+    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
   </head>
 
   <body>
-    <div class="container">
-      <h1 data-th-text="${Name}">Welcome to home page</h1>
+    <div
+      class="bg-gray-200 w-1/2 p-4 flex flex-col space-y-3 mx-auto mt-4 items-center"
+    >
+      <h1 class="text-2 font-bold" data-th-text="${Name}">
+        Welcome to home page
+      </h1>
       <p>Github Repo Link : <span th:text="${GithubRepo}"></span></p>
 
       <a data-th-href="${GithubRepo}"> Click here to open</a>
 
-      <p>This is the home page</p>
+      <p class="text-gray-600">This is the home page</p>
+
+      <div>
+        <button
+          class="px-3 py-3 rounded bg-blue-600 text-white hover:bg-blue-300"
+        >
+          Click Here
+        </button>
+      </div>
     </div>
   </body>
 </html>
