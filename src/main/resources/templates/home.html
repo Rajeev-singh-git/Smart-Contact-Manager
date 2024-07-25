@@ -13,9 +13,14 @@
       }
     </style>
   </head>
+
   <body>
     <div class="container">
-      <h1>Welcome to home page</h1>
+      <h1 data-th-text="${Name}">Welcome to home page</h1>
+      <p>Github Repo Link : <span th:text="${GithubRepo}"></span></p>
+
+      <a data-th-href="${GithubRepo}"> Click here to open</a>
+
       <p>This is the home page</p>
     </div>
   </body>
