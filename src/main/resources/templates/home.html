@@ -1,37 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html
+  lang="en"
+  th:replace="~{base ::parent(~{::#content},~{::title},~{::script})}"
+>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" data-th-href="@{'/css/output.css'}" />
+    <title>Home Page</title>
   </head>
-
-  <body>
-    <div
-      class="bg-gray-200 w-1/2 p-4 flex flex-col space-y-3 mx-auto mt-4 items-center"
-    >
-      <h1 class="text-2 font-bold" data-th-text="${Name}">
-        Welcome to home page
-      </h1>
-      <p>Github Repo Link : <span th:text="${GithubRepo}"></span></p>
-
-      <a data-th-href="${GithubRepo}"> Click here to open</a>
-
-      <p class="text-gray-600">This is the home page</p>
-
-      <div>
-        <button
-          class="px-3 py-3 rounded bg-blue-600 text-white hover:bg-blue-300"
-        >
-          Click Here
-        </button>
-      </div>
-    </div>
-    <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
-  </body>
+  <div id="content">
+    <h1>Welocme to the Home Page</h1>
+    <p>
+      Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquam nisi
+      magnam quas enim animi dolores facilis delectus temporibus reiciendis,
+      eveniet explicabo aut expedita necessitatibus debitis voluptatem. Quisquam
+      optio doloremque placeat?
+    </p>
+  </div>
+  <script>
+    console.log("Home  page");
+  </script>
+  <body></body>
 </html>
