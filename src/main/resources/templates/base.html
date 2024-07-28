@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html
-  class="dark"
+  class="light"
   lang="en"
   th:fragment="parent(content,title,script)"
   xmlns:th="https://www.thymeleaf.org"
@@ -13,6 +13,14 @@
     <link
       href="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.css"
       rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+      integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
     />
   </head>
   <body class="dark:bg-gray-600 dark:text-white">
@@ -29,6 +37,7 @@
     <footer>Footer: Learn Code With Rajeev</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
+    <script data-th-src="@{'/js/script.js'}"></script>
     <th:block data-th-replace="${script}"></th:block>
   </body>
 </html>
