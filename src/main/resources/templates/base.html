@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html
+  class="dark"
   lang="en"
   th:fragment="parent(content,title,script)"
   xmlns:th="https://www.thymeleaf.org"
@@ -14,14 +15,18 @@
       rel="stylesheet"
     />
   </head>
-  <body>
+  <body class="dark:bg-gray-600 dark:text-white">
     <!--common header-->
-    <!-- main content-->
+    <div data-th-replace="navbar :: navbar"></div>
 
-    <section data-th-replace="${content}"></section>
+    <!-- main content-->
+    <div class="p-4">
+      <section data-th-replace="${content}"></section>
+    </div>
     <!-- flow bite content -->
 
     <!--common footer-->
+    <footer>Footer: Learn Code With Rajeev</footer>
 
     <script src="https://cdn.jsdelivr.net/npm/flowbite@2.4.1/dist/flowbite.min.js"></script>
     <th:block data-th-replace="${script}"></th:block>
